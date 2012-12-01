@@ -14,6 +14,10 @@
             <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <TextBlock Name="textBlock1" Text="{Binding Path=Name}" />
         </StackPanel>
-        <DataGrid ItemsSource="{Binding Path=Urls}"></DataGrid>
+        <DataGrid ItemsSource="{Binding Path=Urls}">
+            <!--<DataGrid.Columns>
+                <DataGridHyperlinkColumn Header="Url" Binding="{Binding Path=Url}"></DataGridHyperlinkColumn>
+            </DataGrid.Columns>-->
+        </DataGrid>
     </DockPanel>
 </Window>
