@@ -21,6 +21,7 @@ namespace CCWpf
     {
         public MainWindow()
         {
+            this.DataContext = new ViewModel {Name = "CC Inc"};
             InitializeComponent();
         }
     }
