@@ -20,7 +20,7 @@
                  Background="LightBlue"
                  BorderBrush="Black" 
                  BorderThickness="1,1,1,1" 
-                 CornerRadius="6,6,0,0" >
+                 CornerRadius="0,0,6,6" >
                                 <ContentPresenter x:Name="ContentSite"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
@@ -38,14 +38,16 @@
             <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <TextBlock Name="textBlock1" Text="{Binding Path=Name}" />
         </StackPanel>
-        <DataGrid ItemsSource="{Binding Path=Urls}" Height="292">
-            <!--<DataGrid.Columns>
+
+        <TabControl  Name="tabControl1" TabStripPlacement="Bottom">
+            <TabItem Header="tabItem1" Name="tabItem1">
+                <Grid>
+                    <DataGrid ItemsSource="{Binding Path=Urls}">
+                        <!--<DataGrid.Columns>
                 <DataGridHyperlinkColumn Header="Url" Binding="{Binding Path=Url}"></DataGridHyperlinkColumn>
             </DataGrid.Columns>-->
-        </DataGrid>
-        <TabControl Height="100" Name="tabControl1" Width="200" TabStripPlacement="Bottom">
-            <TabItem Header="tabItem1" Name="tabItem1">
-                <Grid />
+                    </DataGrid>
+                </Grid>
             </TabItem>
         </TabControl>
     </DockPanel>
