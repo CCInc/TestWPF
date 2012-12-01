@@ -9,6 +9,10 @@
         d:DataContext="{d:DesignInstance Type=CCWpf:ViewModel,IsDesignTimeCreatable=True}"
         >
     <Grid>
-        <TextBox Text="{Binding Path=Name}"></TextBox>
+        <StackPanel>
+            <TextBox Text="{Binding Path=Name}"></TextBox>
+            <TextBlock Name="textBlock1" Text="{Binding Path=Name}" />
+        </StackPanel>
+
     </Grid>
 </Window>

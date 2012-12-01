@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CCWpf
 {
-    public class ViewModel
+    public class ViewModel : UnifiedViewModelBase
     {
         public ViewModel()
         {
