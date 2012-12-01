@@ -7,6 +7,10 @@ namespace CCWpf
 {
     public class ViewModel
     {
+        public ViewModel()
+        {
+            Name = "DefaultName";
+        }
         public string Name { get; set; }
     }
 }
