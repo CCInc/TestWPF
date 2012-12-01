@@ -10,7 +10,7 @@
         >
     <Grid>
         <StackPanel>
-            <TextBox Text="{Binding Path=Name}"></TextBox>
+            <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <TextBlock Name="textBlock1" Text="{Binding Path=Name}" />
         </StackPanel>
 
