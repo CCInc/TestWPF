@@ -31,5 +31,10 @@ namespace CCWpf
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
             e.Handled = true;
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Back clicked");
+        }
     }
 }

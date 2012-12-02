@@ -37,6 +37,11 @@
         <StackPanel>
             <TextBox Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <TextBlock Name="textBlock1" Text="{Binding Path=Name}" />
+            <Button Height="25" Name="button1" Width="25" Click="button1_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/CCWpf;component/Icons/back-button6.png" />
+                </Button.Background>
+            </Button>
         </StackPanel>
 
         <TabControl  Name="tabControl1" TabStripPlacement="Bottom">
