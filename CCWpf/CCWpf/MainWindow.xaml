@@ -10,6 +10,7 @@
         d:DataContext="{d:DesignInstance Type=CCWpf:ViewModel,IsDesignTimeCreatable=True}"
         >
     <Window.Resources>
+        <CCWpf:HalfConverter x:Key="halfConverter" />
         <Style TargetType="{x:Type TabItem}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -59,7 +60,9 @@
                     <Setter Property="Background" Value="Beige" />
                     <Setter Property="RenderTransform">
                         <Setter.Value>
-                            <ScaleTransform CenterX="12.5" CenterY="12.5" ScaleX="2" ScaleY="2"></ScaleTransform>
+                            <ScaleTransform 
+                                CenterX="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Button, AncestorLevel=1}, Path=ActualWidth, Converter={StaticResource halfConverter}}" 
+                                CenterY="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Button, AncestorLevel=1}, Path=ActualHeight, Converter={StaticResource halfConverter}}"  ScaleX="2" ScaleY="2"></ScaleTransform>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
