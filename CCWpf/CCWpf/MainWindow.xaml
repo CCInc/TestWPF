@@ -59,7 +59,7 @@
                     <Setter Property="Background" Value="Beige" />
                     <Setter Property="RenderTransform">
                         <Setter.Value>
-                            <ScaleTransform CenterX="50" CenterY="50" ScaleX="1.1" ScaleY="1.1"></ScaleTransform>
+                            <ScaleTransform CenterX="12.5" CenterY="12.5" ScaleX="2" ScaleY="2"></ScaleTransform>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
