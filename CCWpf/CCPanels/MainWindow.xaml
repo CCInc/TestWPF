@@ -3,15 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" 
         Height="200" Width="200">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40" />
-            <ColumnDefinition Width="40" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50*" />
-            <RowDefinition Height="50*" />
-        </Grid.RowDefinitions>
-        <Button Content="Button" Name="button1" Grid.Column="1" Grid.Row="1"/>
-    </Grid>
+    <Canvas>
+        <Button Content="Button" Height="30" Width="30" Canvas.Left="50" Canvas.Bottom="20" Background="Blue"/>
+        <Button Content="Button" Height="30" Width="30" Canvas.Right="50" Canvas.Top="30" Background="Red" />
+    </Canvas>
 </Window>
