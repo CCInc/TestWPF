@@ -6,7 +6,6 @@
         <BitmapImage x:Key="whirlImage" UriSource="Images/Whirl.png" />
         <Style TargetType="{x:Type Button}" x:Key="roundButton">
             <Style.Resources>
-
                 <!-- colors -->
                 <LinearGradientBrush x:Key="roundButtonBackground" StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="Red" />
@@ -22,7 +21,6 @@
                     <GradientStop Color="#FFF9F7A9" Offset="0" />
                     <GradientStop Color="Yellow" Offset="0.2" />
                     <GradientStop Color="Orange" Offset="0.7" />
-
                     <GradientStop Color="Red" Offset="1" />
                 </RadialGradientBrush>
 
@@ -54,7 +52,7 @@
                                 <ColumnDefinition Width="5*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Ellipse x:Name="bgEllipse" Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="{StaticResource roundButtonBackground}" Stroke="{StaticResource roundButtonStroke}" />
+                            <Rectangle x:Name="bgEllipse" Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="{StaticResource roundButtonBackground}" Stroke="{StaticResource roundButtonStroke}" RadiusX="25" RadiusY="25" />
                             <ContentPresenter Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
                             <Ellipse x:Name="shine" Grid.Row="1" Grid.Column="1" Fill="{StaticResource glossShineBrush}" />
                         </Grid>
@@ -96,7 +94,7 @@
                 <ColumnDefinition Width="50*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="50*" />
             </Grid.RowDefinitions>
             <Button Content="Sync History" Style="{StaticResource roundButton}"/>
