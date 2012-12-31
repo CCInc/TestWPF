@@ -1,0 +1,15 @@
+﻿<Window x:Class="UrlThing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <BitmapImage x:Key="MyImageSource" UriSource="Images/Whirl.png" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="234*" />
+            <ColumnDefinition Width="269*" />
+        </Grid.ColumnDefinitions>
+        
+    </Grid>
+</Window>
