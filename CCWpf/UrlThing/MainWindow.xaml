@@ -1,7 +1,7 @@
 ﻿<Window x:Class="UrlThing.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="292" Width="484">
+        Title="MainWindow" Height="258" Width="369">
     <Window.Resources>
         <BitmapImage x:Key="whirlImage" UriSource="Images/Whirl.png" />
         <Style TargetType="{x:Type Button}" x:Key="roundButton">
@@ -103,18 +103,15 @@
         </Menu>
         <Image Source="{StaticResource whirlImage}"/>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50*" />
-                <ColumnDefinition Width="50*" />
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="30" />
-                <RowDefinition Height="50*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Button Content="Sync History" Style="{StaticResource roundButton}" FontSize="13" FontWeight="Normal" />
-            <Button Content="Sync Bookmarks" Grid.Column="1" Style="{StaticResource roundButton}" FontSize="13" FontWeight="Normal"/>
-            <ProgressBar Grid.Row="1" Grid.ColumnSpan="2"></ProgressBar>
+            <Button Content="Sync Bookmarks" Grid.Row="1" Style="{StaticResource roundButton}" FontSize="13" FontWeight="Normal"/>
+            <ProgressBar Grid.Row="2" Grid.ColumnSpan="2" Foreground="Orange" Background="White"></ProgressBar>
         </Grid>
 
     </DockPanel>
