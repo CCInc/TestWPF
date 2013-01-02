@@ -14,6 +14,7 @@ namespace CCWpfTests
         [TestCase("", 0)]
         [TestCase(null, 0)]
         [TestCase(" 123a ", 0)]
+        [TestCase(" 1234 ", 0,ExpectedException = typeof(ArgumentOutOfRangeException))]
         public void GetnumberTest(string numberAsString, int expected)
         {
             int number = GetNumber(numberAsString);
