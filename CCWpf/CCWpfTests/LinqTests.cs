@@ -18,5 +18,13 @@ namespace CCWpfTests
 
             Assert.IsTrue(new[]{4,5,6}.SequenceEqual(filtered));
         }
+
+        [Test]
+        public void FindEvenTest()
+        {
+            var ints = new List<int> { 1, 2, 3, 4, 5, 6 };
+            var actual = new List<int>(); // fix this to select all even from ints
+            Assert.IsTrue(new[]{2,4,6}.SequenceEqual(actual));
+        }
     }
 }
