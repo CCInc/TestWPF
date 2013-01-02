@@ -9,12 +9,12 @@ namespace CCWpfTests
     [TestFixture]
     public class StringParseTests
     {
-        [Test]
-        public void GetnumberTest()
+        [TestCase(" 123 ", 123)]
+        [TestCase("", 123,ExpectedException =typeof(FormatException))]
+        public void GetnumberTest(string numberAsString, int expected)
         {
-            string s = " 123 ";
-            int number = GetNumber(s);
-            Assert.AreEqual(123,number);
+            int number = GetNumber(numberAsString);
+            Assert.AreEqual(expected, number);
         }
 
         public int GetNumber(string numberAsString)
