@@ -10,7 +10,8 @@ namespace CCWpfTests
     public class StringParseTests
     {
         [TestCase(" 123 ", 123)]
-        [TestCase("", 123,ExpectedException =typeof(FormatException))]
+        [TestCase(" -123 ", -123)]
+        [TestCase("", 123, ExpectedException = typeof(FormatException))]
         public void GetnumberTest(string numberAsString, int expected)
         {
             int number = GetNumber(numberAsString);
