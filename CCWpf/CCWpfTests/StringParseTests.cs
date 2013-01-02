@@ -11,8 +11,9 @@ namespace CCWpfTests
     {
         [TestCase(" 123 ", 123)]
         [TestCase(" -123 ", -123)]
-        [TestCase("", 123, ExpectedException = typeof(FormatException))]
-        [TestCase(null, 123, ExpectedException = typeof(NullReferenceException))]
+        [TestCase("", 0, ExpectedException = typeof(FormatException))]
+        [TestCase(null, 0, ExpectedException = typeof(NullReferenceException))]
+        [TestCase(" 123a ", 0, ExpectedException = typeof(FormatException))]
         public void GetnumberTest(string numberAsString, int expected)
         {
             int number = GetNumber(numberAsString);
