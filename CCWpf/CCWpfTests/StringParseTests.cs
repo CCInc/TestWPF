@@ -14,7 +14,7 @@ namespace CCWpfTests
         [TestCase("", 0)]
         [TestCase(null, 0)]
         [TestCase(" 123a ", 0)]
-        [TestCase(" 1234 ", 0,ExpectedException = typeof(ArgumentOutOfRangeException))]
+        [TestCase(" 1234 ", 0, ExpectedException = typeof(ArgumentOutOfRangeException))]
         public void GetnumberTest(string numberAsString, int expected)
         {
             int number = GetNumber(numberAsString);
@@ -26,7 +26,14 @@ namespace CCWpfTests
             try
             {
                 string trim = numberAsString.Trim();
-                return int.Parse(trim);
+                int i = int.Parse(trim);
+                if (i > 999)
+                    throw new ArgumentOutOfRangeException("i");
+                return i;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                throw;
             }
             catch (Exception)
             {
