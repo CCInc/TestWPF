@@ -19,7 +19,8 @@ namespace CCWpfTests
 
         public int GetNumber(string numberAsString)
         {
-            throw new NotImplementedException();
+            string trim = numberAsString.Trim();
+            return int.Parse(trim);
         }
     }
 }
