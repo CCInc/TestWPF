@@ -23,23 +23,20 @@ namespace CCWpfTests
 
         public int GetNumber(string numberAsString)
         {
+            int i;
             try
             {
                 string trim = numberAsString.Trim();
-                int i = int.Parse(trim);
-                if (i > 999)
-                    throw new ArgumentOutOfRangeException("i");
-                return i;
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                throw;
+                i = int.Parse(trim);
+
             }
             catch (Exception)
             {
                 return 0;
             }
-
+            if (i > 999)
+                throw new ArgumentOutOfRangeException("i");
+            return i;
         }
     }
 }
