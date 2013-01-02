@@ -102,17 +102,11 @@
             </MenuItem>
         </Menu>
         <Image Source="{StaticResource whirlImage}"/>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Button Content="Sync History" Style="{StaticResource roundButton}" FontSize="13" FontWeight="Normal" />
-            <Button Content="Sync Bookmarks" Grid.Row="1" Style="{StaticResource roundButton}" FontSize="13" FontWeight="Normal"/>
-            <ProgressBar Grid.Row="2" Grid.ColumnSpan="2" Foreground="Orange" Background="White"></ProgressBar>
-        </Grid>
+        <StackPanel>
+            <Button Content="Sync History" Style="{StaticResource roundButton}" Height="40" FontSize="13" FontWeight="Normal" Margin="0,5,0,5" />
+            <Button Content="Sync Bookmarks" Grid.Row="1" Style="{StaticResource roundButton}" Height="40" FontSize="13" FontWeight="Normal" Margin="0,5,0,5"/>
+            <ProgressBar Grid.Row="2" Grid.ColumnSpan="2" Foreground="Orange" Background="White" Height="40"/>
+        </StackPanel>
 
     </DockPanel>
 </Window>
