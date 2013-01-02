@@ -12,6 +12,7 @@ namespace CCWpfTests
         [TestCase(" 123 ", 123)]
         [TestCase(" -123 ", -123)]
         [TestCase("", 123, ExpectedException = typeof(FormatException))]
+        [TestCase(null, 123, ExpectedException = typeof(NullReferenceException))]
         public void GetnumberTest(string numberAsString, int expected)
         {
             int number = GetNumber(numberAsString);
